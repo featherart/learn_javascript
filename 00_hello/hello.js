@@ -1,13 +1,10 @@
-// $(function() {
+function hello(name) {
 
-  function hello(name) {
-
-      if( name === undefined ) {
-        return "Hello!";
-      }
-      else {
-        return "Hello, " + name + "!";
-      }
-      
-  };
-// });
+    if( name === undefined ) {
+      return "Hello!";
+    }
+    else {
+      return "Hello, " + name + "!";
+    }
+    
+};
