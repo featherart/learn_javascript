@@ -11,22 +11,30 @@ function repeat(str, num) {
   }
 } 
 
-function join(arr) {
+function join(arr, arg) {
   var len = arr.length;
-  if len == 0 {
+  var str = "";
+  if( len == 0 ) {
     return "";
   }
-  else {
-    for( var i = 0; i < len; i++ ) {
-      return "" += arr[i];
+  if( arg == undefined ) {
+      for( var i = 0; i < len; i++ ) {
+      str += arr[i];
     }
+    return str;
   }
-
+  else {
+    for( var i = 0; i < len-1; i++ ) {
+      str += arr[i] + arg;
+    }
+    str+=arr[len-1];
+    return str;
+  }
 }
 
-// function sum() {
+function sum() {
 
-// }
+}
 
 // function paramify() {
 
