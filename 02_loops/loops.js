@@ -52,6 +52,7 @@ function sum(arr) {
 function paramify(hash) {
   var len = Object.keys(hash).length;
   var str = "";
+  var arr = [];
 
   if( len == 0 ) {
     return "";
@@ -59,21 +60,29 @@ function paramify(hash) {
   else if( len == 1 ) {
     for( var k in hash ) {
       if (hash.hasOwnProperty(k)) {
-          //alert('key is: ' + k + ', value is: ' + hash[k]);
-
         return k + "=" + hash[k];
       }
     }
   }
   else {
-    for (var k in hash) {
-      if (hash.hasOwnProperty(k)) {
-        str += k + "=" + hash[k] + "&";
-      }
+    arr = Object.keys(hash);
+    arr.sort();
+    for( var i = 0; i < arr.length; i++ ) { 
+      str += arr[i] +"="+ hash[arr[i]] + "&"; 
     }
-    return str.substring(0, str.length - 1)
+    return str.substring(0, str.length - 1);
   }
 }
+  // else {
+    // for (var k in hash) {
+    //   if (hash.hasOwnProperty(k)) {
+    //     //str += k + "=" + hash[k] + "&";
+
+    //   }
+    // }
+    // return str.substring(0, str.length - 1);
+//   }
+// }
 
 // function factorial() {
 
