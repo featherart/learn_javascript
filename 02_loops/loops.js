@@ -73,17 +73,9 @@ function paramify(hash) {
     return str.substring(0, str.length - 1);
   }
 }
-  // else {
-    // for (var k in hash) {
-    //   if (hash.hasOwnProperty(k)) {
-    //     //str += k + "=" + hash[k] + "&";
 
-    //   }
-    // }
-    // return str.substring(0, str.length - 1);
-//   }
-// }
-
-// function factorial() {
-
-// }
+function factorial(num) {
+  // if( num == 0 ) {
+  //   return 0;
+  // }
+}

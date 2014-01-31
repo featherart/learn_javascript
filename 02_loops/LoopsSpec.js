@@ -96,7 +96,7 @@ describe("Loops", function() {
 			});
 			
 			// Advanced. Change "xit" to "it" to run this test.
-			xit("skips properties of the object's prototype", function() {
+			it("skips properties of the object's prototype", function() {
 				var Alphabet = function() { 
 					this.a = 1;
 					this.b = 2;
@@ -113,8 +113,12 @@ describe("Loops", function() {
   // You can either use iteration (loops) or recursion. 
   // (Recursion is easier, but might blow your mind.)
   describe("factorial", function() {
-    it("computes the factorial of 0");
-    it("computes the factorial of 1");
+    it("computes the factorial of 0") {
+    	expect(factorial(0)).toEqual(0);
+    }
+    it("computes the factorial of 1") {
+    	expect(factorial(1)).toEqual(1);
+    }
     it("computes the factorial of 2");
     it("computes the factorial of 5");
     it("computes the factorial of 10");
