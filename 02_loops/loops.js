@@ -75,7 +75,10 @@ function paramify(hash) {
 }
 
 function factorial(num) {
-  // if( num == 0 ) {
-  //   return 0;
-  // }
+  if( num == 0 || num == 1 ) {
+    return num;
+  }
+  else {
+    return num * factorial(num - 1);
+  }
 }
