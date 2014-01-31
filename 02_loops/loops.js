@@ -32,13 +32,48 @@ function join(arr, arg) {
   }
 }
 
-function sum() {
-
+function sum(arr) {
+  var len = arr.length;
+  var num = 0;
+  if( len == 0 ) {
+    return 0;
+  }
+  if( len == 1 ) {
+    return arr[0];
+  }
+  else {
+    for( var i = 0; i < len; i++ ) {
+      num += arr[i];
+    }
+    return num;
+  }
 }
 
-// function paramify() {
+function paramify(hash) {
+  var len = Object.keys(hash).length;
+  var str = "";
 
-// }
+  if( len == 0 ) {
+    return "";
+  }
+  else if( len == 1 ) {
+    for( var k in hash ) {
+      if (hash.hasOwnProperty(k)) {
+          //alert('key is: ' + k + ', value is: ' + hash[k]);
+
+        return k + "=" + hash[k];
+      }
+    }
+  }
+  else {
+    for (var k in hash) {
+      if (hash.hasOwnProperty(k)) {
+        str += k + "=" + hash[k] + "&";
+      }
+    }
+    return str.substring(0, str.length - 1)
+  }
+}
 
 // function factorial() {
 
