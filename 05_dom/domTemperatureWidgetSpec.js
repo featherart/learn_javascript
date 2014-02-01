@@ -4,7 +4,7 @@ describe("TemperatureWidget", function() {
 	beforeEach(function() {		
 		jasmineContent = document.getElementById("jasmine_content");
 		// set up some sample HTML in the test page 
-		// (backslash is a line contination char)
+		// (backslash is a line continuation char)
 		jasmineContent.innerHTML = "                                \
 <div id='temperatureWidget'>                                      \
   <p>Fahrenheit: <input name='fahrenheit'></p>                  \
